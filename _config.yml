@@ -3,8 +3,8 @@ title: Whalefall Blog
 description: >-
   Whalefall 的安全学习笔记，记录 CTF、Pwn 与二进制安全相关内容。
 url: "https://whalefall-prog.github.io"
-# 仓库是项目页，访问路径带仓库名；若改名为 <用户名>.github.io 或绑定自定义域名，请将 baseurl 置空
-baseurl: "/Whalefall-blog.github.io"
+# 用户页站点，发布在 https://whalefall-prog.github.io/ 根路径
+baseurl: ""
 lang: zh-CN
 timezone: Asia/Shanghai
 

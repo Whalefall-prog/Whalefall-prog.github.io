@@ -24,7 +24,7 @@ bundle install
 bundle exec jekyll serve
 ```
 
-浏览器访问 <http://127.0.0.1:4000/Whalefall-blog.github.io/>。
+浏览器访问 <http://127.0.0.1:4000/>。
 
 ## 写文章
 
@@ -57,7 +57,7 @@ tags:
 
 GitHub Pages 会自动构建并发布。
 
-> 当前仓库名是 `Whalefall-blog.github.io`，并非 `<用户名>.github.io`，因此按项目页发布，访问地址带仓库名。`_config.yml` 中的 `baseurl` 已设为 `/Whalefall-blog.github.io`。若将仓库改名为 `Whalefall-prog.github.io` 或绑定自定义域名，请把 `baseurl` 改为空字符串。
+> 本仓库命名为 `Whalefall-prog.github.io`，作为用户页发布，访问地址为 <https://whalefall-prog.github.io/>，`baseurl` 保持为空。若绑定自定义域名，请在仓库根目录添加 `CNAME` 文件，并保持 `baseurl` 为空。
 
 ## License
 
