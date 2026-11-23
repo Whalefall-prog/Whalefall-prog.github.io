@@ -1,0 +1,337 @@
+---
+---
+
+// ===== 黑客终端风：变量覆盖（需在引入 minima 前定义） =====
+$base-font-family: "JetBrains Mono", "Fira Code", "Cascadia Code", ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+$base-font-size: 16px;
+$base-font-weight: 400;
+$base-line-height: 1.7;
+$spacing-unit: 32px;
+
+$text-color: #b9cac1;
+$background-color: #0a0f0d;
+$brand-color: #33ff99;
+
+$grey-color: #6f857a;
+$grey-color-light: #17231e;
+$grey-color-dark: #050a08;
+
+$content-width: 880px;
+
+@import "minima";
+
+// ===== 覆盖样式 =====
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: $background-color;
+  background-image: radial-gradient(1100px 520px at 50% -180px, rgba(51, 255, 153, 0.09), transparent 70%);
+  background-attachment: fixed;
+  color: $text-color;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(51, 255, 153, 0.28);
+  color: #f2fff9;
+}
+
+/* 链接 */
+a {
+  color: $brand-color;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #24c97a;
+}
+
+a:hover {
+  color: #8affc7;
+  text-decoration: underline;
+  text-shadow: 0 0 8px rgba(51, 255, 153, 0.45);
+}
+
+/* 头部 */
+.site-header {
+  background-color: rgba(5, 10, 8, 0.94);
+  border-top: 3px solid $brand-color;
+  border-bottom: 1px solid $grey-color-light;
+}
+
+.site-title,
+.site-title:visited {
+  color: #e9fff5;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.site-title::before {
+  content: "> ";
+  color: $brand-color;
+}
+
+.site-title::after {
+  content: "_";
+  color: $brand-color;
+  margin-left: 2px;
+  animation: blink 1.2s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-title::after {
+    animation: none;
+  }
+}
+
+.site-nav .page-link {
+  color: #93a89e;
+}
+
+.site-nav .page-link:hover {
+  color: $brand-color;
+  text-shadow: 0 0 8px rgba(51, 255, 153, 0.45);
+}
+
+/* 标题 */
+h1, h2, h3, h4, h5, h6 {
+  color: #e9fff5;
+  letter-spacing: 0.01em;
+}
+
+h2 {
+  font-size: 1.5rem;
+  border-bottom: 1px solid $grey-color-light;
+  padding-bottom: 0.35em;
+  margin-top: 1.8em;
+}
+
+h3 {
+  color: #d7ffe9;
+}
+
+/* 文章元信息 */
+.post-meta,
+.post-meta a {
+  color: #6f857a;
+  font-size: 0.9em;
+}
+
+.post-title {
+  color: #f2fff9;
+}
+
+/* 分隔线 */
+hr {
+  border: 0;
+  border-top: 1px dashed #22402f;
+}
+
+/* 行内代码与代码块 */
+code {
+  font-family: $base-font-family;
+  background-color: #07110c;
+  color: #8affc7;
+  border: 1px solid #1c3529;
+  border-radius: 4px;
+  padding: 0.12em 0.35em;
+  font-size: 0.92em;
+}
+
+pre {
+  background-color: #07110c;
+  border: 1px solid #1c3529;
+  border-radius: 6px;
+  box-shadow: inset 0 0 24px rgba(51, 255, 153, 0.04);
+  overflow-x: auto;
+}
+
+pre > code {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  font-size: 0.9em;
+}
+
+.highlight {
+  background: transparent;
+}
+
+.highlighter-rouge .highlight {
+  background: #07110c;
+  border: 1px solid #1c3529;
+  border-radius: 6px;
+}
+
+.highlighter-rouge pre.highlight,
+pre.highlight {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+
+div.highlight {
+  background: #07110c;
+  border: 1px solid #1c3529;
+  border-radius: 6px;
+  margin-bottom: 1.2em;
+}
+
+div.highlight pre {
+  border: 0;
+  margin: 0;
+}
+
+/* 引用 */
+blockquote {
+  color: #a9bdb3;
+  border-left: 4px solid $brand-color;
+  background: #0e1713;
+  padding: 0.6em 1em;
+  margin-left: 0;
+}
+
+/* 表格 */
+table {
+  border-collapse: collapse;
+}
+
+table th {
+  background: #101a15;
+  color: #e9fff5;
+}
+
+table th,
+table td {
+  border: 1px solid $grey-color-light;
+}
+
+/* 首页文章列表 */
+.post-list > li {
+  border-bottom: 1px dashed #22402f;
+  padding-bottom: 1.2em;
+}
+
+.post-list > li:last-child {
+  border-bottom: 0;
+}
+
+.post-list h3 a {
+  color: #e9fff5;
+}
+
+.post-list h3 a:hover {
+  color: $brand-color;
+}
+
+.post-link::before {
+  content: "» ";
+  color: $brand-color;
+}
+
+/* 页脚 */
+.site-footer {
+  border-top: 1px solid $grey-color-light;
+  color: #6f857a;
+  padding: 24px 0;
+}
+
+.site-footer a {
+  color: #93a89e;
+}
+
+.site-footer a:hover {
+  color: $brand-color;
+}
+
+/* 图片 */
+.post-content img {
+  border: 1px solid #1c3529;
+  border-radius: 6px;
+}
+
+/* 代码高亮配色 */
+.highlight .c,
+.highlight .cm,
+.highlight .c1,
+.highlight .cs {
+  color: #5f7a6c;
+  font-style: italic;
+}
+
+.highlight .k,
+.highlight .kd,
+.highlight .kn,
+.highlight .kr {
+  color: $brand-color;
+}
+
+.highlight .s,
+.highlight .sa,
+.highlight .sb,
+.highlight .sc,
+.highlight .sd,
+.highlight .s1,
+.highlight .s2,
+.highlight .se,
+.highlight .sh,
+.highlight .si,
+.highlight .sx,
+.highlight .sr,
+.highlight .ss {
+  color: #ffd479;
+}
+
+.highlight .m,
+.highlight .mf,
+.highlight .mh,
+.highlight .mi,
+.highlight .mo,
+.highlight .il {
+  color: #7dd3fc;
+}
+
+.highlight .nf,
+.highlight .fm,
+.highlight .nb,
+.highlight .bp {
+  color: #7dffc4;
+}
+
+.highlight .nc,
+.highlight .nn {
+  color: #a5f3d0;
+}
+
+.highlight .o,
+.highlight .ow {
+  color: #c8d8cf;
+}
+
+.highlight .p {
+  color: #9fb3aa;
+}
+
+.highlight .err {
+  color: #ff7b72;
+}
+
+.highlight .gp {
+  color: #6f857a;
+}
+
+.highlight .gd {
+  color: #ff7b72;
+}
+
+.highlight .gi {
+  color: #7dffc4;
+}
